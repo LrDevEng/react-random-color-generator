@@ -1,0 +1,36 @@
+:root {
+  --header-footer-bg-color: rgba(8, 16, 39, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url('../public/minionsPainting.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.App-header {
+  height: 80px;
+  color: white;
+  background-color: var(--header-footer-bg-color);
+}
+
+.App-main {
+  flex: 1;
+}
+
+.App-footer {
+  height: 30px;
+  color: white;
+  background-color: var(--header-footer-bg-color);
+}
