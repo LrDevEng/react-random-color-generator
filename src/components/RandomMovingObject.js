@@ -7,8 +7,8 @@ function RandomMovingObject(props) {
   const maxX = parentSize.width - ballSize;
   const maxY = parentSize.height - ballSize;
 
-  const animationDurationX600px = 2.55;
-  const animationDurationY600px = 2.9;
+  const animationDurationX600px = 3.05;
+  const animationDurationY600px = 3.4;
   const animationDurationX = (animationDurationX600px * parentSize.width) / 600;
   const animationDurationY = (animationDurationY600px * parentSize.width) / 600;
 
@@ -35,8 +35,14 @@ function RandomMovingObject(props) {
       left: '0px',
       width: `${ballSize}px`,
       height: `${ballSize}px`,
-      backgroundColor: 'red',
+      backgroundColor: props.color,
+      transition: 'background-color .5s ease-in-out, boxShadow .5s ease-in-out',
       textAlign: 'center',
+      cursor: 'zoom-in',
+      ':active': {
+        border: '2px solid black',
+        boxShadow: '0 0 50px rgba(255, 255, 255, 1)',
+      },
     },
     animate: {
       animationName: [moveX, moveY],
@@ -48,7 +54,12 @@ function RandomMovingObject(props) {
   });
 
   return (
-    <div className={css(styles.ball, styles.animate)}>Generated Color:</div>
+    <button
+      className={css(styles.ball, styles.animate)}
+      onClick={props.onClick}
+    >
+      <div>Generated Color: {props.color}</div>
+    </button>
   );
 }
 

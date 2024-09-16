@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function RandomMovementContainer() {
+function RandomMovementContainer(props) {
   const windowDimension = useWindowDimension();
   const container = useRef();
   const [size, setSize] = useState({
@@ -27,7 +27,7 @@ function RandomMovementContainer() {
 
   return (
     <div className={css(styles.maxSize)} ref={container}>
-      <RandomMovingObject size={size} />
+      <RandomMovingObject size={size} color={props.color} onClick={props.onObjectClick}/>
     </div>
   );
 }
