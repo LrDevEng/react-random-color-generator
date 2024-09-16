@@ -1,7 +1,7 @@
 import { css, StyleSheet } from 'aphrodite';
 import { useEffect, useRef, useState } from 'react';
 import useWindowDimension from '../hooks/useWindowDimension';
-import RandomMovementObject from './RandomMovementObject';
+import RandomMovingObject from './RandomMovingObject';
 
 const styles = StyleSheet.create({
   maxSize: {
@@ -27,7 +27,7 @@ function RandomMovementContainer() {
 
   return (
     <div className={css(styles.maxSize)} ref={container}>
-      <RandomMovementObject size={size} />
+      <RandomMovingObject size={size} />
     </div>
   );
 }

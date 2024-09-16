@@ -22,11 +22,13 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
     "@upleveled/react-scripts": "5.0.13",
     "aphrodite": "^2.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "1.78.0"
+    "sass": "1.78.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
