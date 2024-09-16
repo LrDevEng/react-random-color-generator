@@ -1,4 +1,4 @@
-import { css, StyleSheet } from 'aphrodite';
+import { css, StyleSheet } from 'aphrodite/no-important';
 
 function RandomMovingObject(props) {
   const parentSize = props.size;
@@ -24,12 +24,19 @@ function RandomMovingObject(props) {
 
   const styles = StyleSheet.create({
     ball: {
-      display: 'block',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
       position: 'relative',
+      border: '2px solid white',
       borderRadius: '50%',
-      width: parentSize.height * aspectRatio,
-      height: parentSize.height * aspectRatio,
+      boxShadow: '0 0 50px rgba(0, 0, 0, 1)',
+      top: '0px',
+      left: '0px',
+      width: `${ballSize}px`,
+      height: `${ballSize}px`,
       backgroundColor: 'red',
+      textAlign: 'center',
     },
     animate: {
       animationName: [moveX, moveY],
@@ -41,11 +48,7 @@ function RandomMovingObject(props) {
   });
 
   return (
-    <div className={css(styles.ball, styles.animate)}>
-      Height: {parentSize.height}
-      <br />
-      Width: {parentSize.width}
-    </div>
+    <div className={css(styles.ball, styles.animate)}>Generated Color:</div>
   );
 }
 
