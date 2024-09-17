@@ -43,7 +43,7 @@ function RandomMovingObject(props) {
       left: '0px',
       width: `${ballSize}px`,
       height: `${ballSize}px`,
-      backgroundColor: props.backgroundColor,
+      backgroundColor: 'transparent',
       transition: 'background-color .5s ease-in-out, boxShadow .5s ease-in-out',
       textAlign: 'center',
       cursor: 'crosshair',
@@ -67,7 +67,7 @@ function RandomMovingObject(props) {
       className={css(styles.ball, styles.animate)}
       onClick={props.onClick}
     >
-      <div style={{ backgroundColor: styles.ball.backgroundColor }}>
+      <div style={{ backgroundColor: props.backgroundColor }}>
         Generated Color: {props.backgroundColor}
       </div>
     </button>
