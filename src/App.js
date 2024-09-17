@@ -17,7 +17,7 @@ export default function App() {
         <Toolbox handleColorGen={handleColorGen} />
       </header>
       <main className="App-main">
-        <RandomMovementContainer color={color} onObjectClick={handleColorGen} />
+        <RandomMovementContainer backgroundColor={color} onObjectClick={handleColorGen} />
       </main>
       <footer className="App-footer">Footer</footer>
     </div>

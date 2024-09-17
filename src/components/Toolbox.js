@@ -21,6 +21,10 @@ const styles = StyleSheet.create({
   border: {},
 });
 
+// Container component for: hue dropdown menu, luminosity drop down menu, button to generate random color
+// Placed in the navigation bar of the app
+// Input interface:
+// - props.handleColorGen --> callback function to generate random color
 function Toolbox(props) {
   return (
     <div
@@ -32,7 +36,7 @@ function Toolbox(props) {
         <button>button3</button>
       </div>
       <div className={css(styles.flexEnd, styles.adjust)}>
-        <Button onClick={props.handleColorGen} />
+        <Button text="Generate" onClick={props.handleColorGen} />
       </div>
     </div>
   );

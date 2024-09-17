@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+// Custom hook set on window resize event, returning inner window size
 function useWindowDimension() {
   const [dimension, setDimension] = useState({
     width: 0,

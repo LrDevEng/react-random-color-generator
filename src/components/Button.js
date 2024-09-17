@@ -30,10 +30,14 @@ const styles = StyleSheet.create({
   },
 });
 
+// Styled button component
+// Input interface:
+// - props.onClick  --> callback function when button is clicked
+// - props.text     --> displayed text
 function Button(props) {
   return (
     <button className={css(styles.basicButton)} onClick={props.onClick}>
-      Generate
+      {props.text}
     </button>
   );
 }

@@ -4,12 +4,17 @@ import useWindowDimension from '../hooks/useWindowDimension';
 import RandomMovingObject from './RandomMovingObject';
 
 const styles = StyleSheet.create({
-  maxSize: {
+  greedy: {
     height: '100%',
     width: '100%',
   },
 });
 
+// Container component holding random moving object (child) taking as much space on the viewport as possible
+// Passing its current size to the child
+// Input interface:
+// - props.onObjectClick    --> callback function when random moving object (child) is clicked
+// - props.backgroundColor  --> backgroundColor of random moving object (child)
 function RandomMovementContainer(props) {
   const windowDimension = useWindowDimension();
   const container = useRef();
@@ -26,8 +31,12 @@ function RandomMovementContainer(props) {
   }, [windowDimension]);
 
   return (
-    <div className={css(styles.maxSize)} ref={container}>
-      <RandomMovingObject size={size} color={props.color} onClick={props.onObjectClick}/>
+    <div className={css(styles.greedy)} ref={container}>
+      <RandomMovingObject
+        size={size}
+        backgroundColor={props.backgroundColor}
+        onClick={props.onObjectClick}
+      />
     </div>
   );
 }
