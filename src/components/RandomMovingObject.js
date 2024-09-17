@@ -67,7 +67,9 @@ function RandomMovingObject(props) {
       className={css(styles.ball, styles.animate)}
       onClick={props.onClick}
     >
-      <div>Generated Color: {props.backgroundColor}</div>
+      <div style={{ backgroundColor: styles.ball.backgroundColor }}>
+        Generated Color: {props.backgroundColor}
+      </div>
     </button>
   );
 }
