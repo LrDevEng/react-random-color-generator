@@ -31,6 +31,10 @@
 
 .App-footer {
   height: 30px;
-  color: white;
+  color: #0d6efd;
   background-color: var(--header-footer-bg-color);
+}
+
+.App-footer a {
+  color: #0d6efd;
 }

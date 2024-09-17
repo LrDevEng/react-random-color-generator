@@ -2,7 +2,9 @@ import { css, StyleSheet } from 'aphrodite';
 
 const styles = StyleSheet.create({
   basicButton: {
+    width: '150px',
     cursor: 'pointer',
+    marginLeft: '10px',
     outline: 0,
     display: 'inline-block',
     fontWeight: '400',
