@@ -44,7 +44,7 @@ function RandomMovingObject(props) {
       width: `${ballSize}px`,
       height: `${ballSize}px`,
       backgroundColor: 'transparent',
-      transition: 'background-color .5s ease-in-out, boxShadow .5s ease-in-out',
+      transition: 'boxShadow .5s ease-in-out',
       textAlign: 'center',
       cursor: 'crosshair',
       ':active': {
@@ -60,6 +60,16 @@ function RandomMovingObject(props) {
       animationDirection: 'alternate',
       animationTimingFunction: 'linear',
     },
+    // Styling for div checked by drone
+    divDrone: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      borderRadius: '50%',
+      height: '100%',
+      backgroundColor: props.backgroundColor,
+      transition: 'background-color .5s ease-in-out',
+    },
   });
 
   return (
@@ -67,7 +77,7 @@ function RandomMovingObject(props) {
       className={css(styles.ball, styles.animate)}
       onClick={props.onClick}
     >
-      <div style={{ backgroundColor: props.backgroundColor }}>
+      <div className={css(styles.divDrone)}>
         Generated Color: {props.backgroundColor}
       </div>
     </button>
