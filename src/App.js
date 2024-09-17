@@ -2,6 +2,7 @@ import './App.css';
 import randomColor from 'randomcolor';
 import { useState } from 'react';
 import RandomMovementContainer from './components/RandomMovementContainer';
+import SpeechBubble from './components/SpeechBubble';
 import Toolbox from './components/Toolbox.js';
 
 const hueOptions = [
@@ -28,13 +29,16 @@ export default function App() {
 
   const [color, setColor] = useState('transparent');
   const handleColorGen = () => {
-    console.log(hue, luminosity);
     setColor(
       randomColor({
         luminosity: luminosity.value,
         hue: hue.value,
       }),
     );
+  };
+
+  const handleReset = () => {
+    setColor('transparent');
   };
 
   return (
@@ -53,6 +57,10 @@ export default function App() {
         />
       </header>
       <main className="App-main">
+        <SpeechBubble
+          seekingHelp={color === 'transparent'}
+          handleReset={handleReset}
+        />
         <RandomMovementContainer
           backgroundColor={color}
           onObjectClick={handleColorGen}
