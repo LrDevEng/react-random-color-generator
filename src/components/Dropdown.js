@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
 // - props.selected     --> selected option
 // - props.setSelected  --> callback function to set selected option
 // - props.label        --> label to be displayed before the dropdown menu
+// - props.placeholder  --> dropdown placeholder value
 function Dropdown(props) {
   return (
     <div className={css(styles.box)}>
@@ -30,11 +31,11 @@ function Dropdown(props) {
         <Select
           className="basic-single"
           classNamePrefix="select"
-          isClearable={true}
           isSearchable={true}
           options={props.options}
           defaultValue={props.selected}
           onChange={props.setSelected}
+          placeholder={props.placeholder}
           theme={(theme) => ({
             ...theme,
             border: 0,
