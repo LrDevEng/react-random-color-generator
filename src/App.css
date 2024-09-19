@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+h1 {
+  color: #0d6efd;
+}
+
 .App {
   height: 100vh;
   display: flex;

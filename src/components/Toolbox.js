@@ -44,7 +44,7 @@ function Toolbox(props) {
       className={css(styles.basicToolbox, styles.flexAround, styles.padding)}
     >
       <div className={css(styles.flexAround, styles.greedy)}>
-        <h2 style={{ color: '#0d6efd' }}>Toolbox</h2>
+        <h1>Toolbox</h1>
         <Dropdown
           label="Hue"
           selected={props.hue}

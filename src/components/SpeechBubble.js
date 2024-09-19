@@ -1,8 +1,18 @@
 import { css, StyleSheet } from 'aphrodite';
 import Button from './Button';
 
+// Keyframe for pumping animation
+const pump = {
+  from: { width: '300px', height: '200px' },
+  to: { width: '315px', height: '210px' },
+};
+
 const styles = StyleSheet.create({
   bubble: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center',
     position: 'fixed',
     marginTop: '20px',
     marginRight: '20px',
@@ -37,20 +47,14 @@ const styles = StyleSheet.create({
 function SpeechBubble(props) {
   return props.seekingHelp ? (
     <div className={css(styles.bubble)}>
-      Oh no ... 😱
-      <br />
-      <br /> Seems like an uncolored object has entered our world.
-      <br />
-      <br /> Can you help coloring it? 🎨
+      <div>Oh no ... 😱</div>
+      <div>Seems like an uncolored object has entered our world.</div>
+      <div>Can you help coloring it? 🎨</div>
     </div>
   ) : (
     <div className={css(styles.bubble)}>
-      Yeah ... 🎉🎉🎉
-      <br />
-      <br />
-      Thank you so much!
-      <br />
-      <br />
+      <div>Yeah ... 🎉🎉🎉</div>
+      <div>Thank you so much!</div>
       <Button text="Reset" onClick={props.handleReset} />
     </div>
   );

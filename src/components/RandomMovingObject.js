@@ -51,6 +51,7 @@ function RandomMovingObject(props) {
         border: '2px solid black',
         boxShadow: '0 0 50px rgba(255, 255, 255, 1)',
       },
+      overflow: 'hidden',
     },
     // Styling for animaton
     animate: {
