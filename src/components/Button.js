@@ -4,7 +4,6 @@ const styles = StyleSheet.create({
   basicButton: {
     width: '150px',
     cursor: 'pointer',
-    marginLeft: '10px',
     marginTop: '5px',
     marginBottom: '5px',
     outline: 0,
