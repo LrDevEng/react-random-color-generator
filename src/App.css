@@ -10,8 +10,9 @@
 
 h1 {
   color: #0d6efd;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-
 .App {
   height: 100vh;
   display: flex;
@@ -24,7 +25,7 @@ h1 {
 }
 
 .App-header {
-  height: 80px;
+  height: fit-content;
   color: white;
   background-color: var(--header-footer-bg-color);
 }

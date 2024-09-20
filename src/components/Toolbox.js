@@ -6,23 +6,25 @@ const styles = StyleSheet.create({
   flexAround: {
     display: 'flex',
     justifyContent: 'space-around',
+    alignItems: 'flex-end',
+    flexWrap: 'wrap',
   },
   flexEnd: {
     display: 'flex',
     justifyContent: 'flex-end',
+    alignItems: 'flex-end',
   },
   humble: {
+    height: 'fit-content',
     flex: 1,
-    alignItems: 'center',
   },
   greedy: {
     flex: 2,
-    alignItems: 'center',
   },
   basicToolbox: {
     height: '100%',
     width: '100%',
-    padding: '20px',
+    padding: '10px 20px 10px 20px',
   },
 });
 
@@ -45,20 +47,22 @@ function Toolbox(props) {
     >
       <div className={css(styles.flexAround, styles.greedy)}>
         <h1>Toolbox</h1>
-        <Dropdown
-          label="Hue"
-          selected={props.hue}
-          setSelected={props.setHue}
-          options={props.hueOptions}
-          placeholder={props.huePlaceholder}
-        />
-        <Dropdown
-          label="Luminosity"
-          selected={props.luminosity}
-          setSelected={props.setLuminosity}
-          options={props.luminosityOptions}
-          placeholder={props.luminosityPlaceholder}
-        />
+        <div className={css(styles.flexAround)}>
+          <Dropdown
+            label="Hue"
+            selected={props.hue}
+            setSelected={props.setHue}
+            options={props.hueOptions}
+            placeholder={props.huePlaceholder}
+          />
+          <Dropdown
+            label="Luminosity"
+            selected={props.luminosity}
+            setSelected={props.setLuminosity}
+            options={props.luminosityOptions}
+            placeholder={props.luminosityPlaceholder}
+          />
+        </div>
       </div>
       <div className={css(styles.flexEnd, styles.humble)}>
         <Button text="Generate" onClick={props.handleColorGen} />

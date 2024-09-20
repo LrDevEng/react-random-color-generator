@@ -3,7 +3,7 @@ import { css, StyleSheet } from 'aphrodite/no-important';
 // Component that moves and bounces around its parent container
 // Currently styled to be a ball
 // Input interface:
-// - props.size             --> dimensions of parent container as object
+// - props.size             --> dimensions of parent container as object containing width and height property
 // - props.backgroundColor  --> backgroundColor for component
 // - props.onClick          --> callback function triggered when component is clicked
 function RandomMovingObject(props) {
@@ -12,7 +12,7 @@ function RandomMovingObject(props) {
   const ballSize = parentSize.height * aspectRatio;
   const maxX = parentSize.width - ballSize;
   const maxY = parentSize.height - ballSize;
-  const animationDurationX600px = 3.05;
+  const animationDurationX600px = 3.1;
   const animationDurationY600px = 3.4;
   const animationDurationX = (animationDurationX600px * parentSize.width) / 600;
   const animationDurationY = (animationDurationY600px * parentSize.width) / 600;
@@ -46,6 +46,9 @@ function RandomMovingObject(props) {
       backgroundColor: 'transparent',
       transition: 'boxShadow .5s ease-in-out',
       textAlign: 'center',
+      fontFamily: 'Ruluko, sans-serif',
+      fontWeight: '800',
+      fontStyle: 'normal',
       cursor: 'crosshair',
       ':active': {
         border: '2px solid black',

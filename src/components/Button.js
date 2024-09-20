@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
     width: '150px',
     cursor: 'pointer',
     marginLeft: '10px',
+    marginTop: '5px',
+    marginBottom: '5px',
     outline: 0,
     display: 'inline-block',
     fontFamily: 'Ruluko, sans-serif',

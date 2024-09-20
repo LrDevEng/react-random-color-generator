@@ -1,12 +1,6 @@
 import { css, StyleSheet } from 'aphrodite';
 import Button from './Button';
 
-// Keyframe for pumping animation
-const pump = {
-  from: { width: '300px', height: '200px' },
-  to: { width: '315px', height: '210px' },
-};
-
 const styles = StyleSheet.create({
   bubble: {
     display: 'flex',

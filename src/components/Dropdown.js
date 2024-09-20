@@ -13,6 +13,8 @@ const styles = StyleSheet.create({
     paddingLeft: '10px',
     border: '1px solid #0d6efd',
     marginLeft: '10px',
+    marginTop: '5px',
+    marginBottom: '5px',
   },
 });
 
