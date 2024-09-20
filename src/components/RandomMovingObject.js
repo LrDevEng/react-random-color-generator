@@ -9,7 +9,7 @@ import { css, StyleSheet } from 'aphrodite/no-important';
 function RandomMovingObject(props) {
   const parentSize = props.size;
   const aspectRatio = 0.15;
-  const ballSize = parentSize.height * aspectRatio;
+  const ballSize = Math.max(parentSize.height * aspectRatio, 70);
   const maxX = parentSize.width - ballSize;
   const maxY = parentSize.height - ballSize;
   const animationDurationX600px = 3.1;
@@ -73,6 +73,9 @@ function RandomMovingObject(props) {
       height: '100%',
       backgroundColor: props.backgroundColor,
       transition: 'background-color .5s ease-in-out',
+      '@media (max-height: 800px)': {
+        fontSize: '0.8em',
+      },
     },
   });
 
